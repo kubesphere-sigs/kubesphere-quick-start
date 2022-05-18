@@ -1,0 +1,6 @@
+[book]
+authors = ["Administrator"]
+language = "en"
+multilingual = false
+src = "src"
+title = "KubeSphere 3.2.1 快速入门"
