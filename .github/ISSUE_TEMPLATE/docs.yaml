@@ -1,0 +1,48 @@
+name: 新增章节
+description: 新增一篇 KubeSphere 3.2.1 快速入门的文档
+body:
+  - type: input
+    id: chapter
+    validations:
+      required: true
+    attributes:
+      label: 章节
+  - type: input
+    id: reference
+    validations:
+      required: true
+    attributes:
+      label: 参考链接
+
+  - type: markdown
+    id: progress
+    attributes:
+      value: |
+        ## 当前进度
+  - type: input
+    id: progress_2
+    validations:
+      required: true
+    attributes:
+      label: 已有人认领？
+      description: 只能填写 `yes` 或者 `no`
+  - type: input
+    id: progress_3
+    validations:
+      required: true
+    attributes:
+      label: 已提交 PR？
+      description: 只能填写 `yes` 或者 `no`
+  - type: input
+    id: progress_4
+    validations:
+      required: true
+    attributes:
+      label: 正在review？
+      description: 只能填写 `yes` 或者 `no`
+  - type: input
+    id: progress_5
+    validations:
+      required: true
+    attributes:
+      label: 已发布？
