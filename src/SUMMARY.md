@@ -1,8 +1,9 @@
 # Summary
 
 [入门必读](README.md)
+
 - [多租户管理快速入门](./admin-quick-start.md)
-- [应用路由与服务示例](./ingress-demo.md)
+- [应用路由与服务示例](ingress-demo/index.md)
 - [创建 Wordpress 应用并发布至 Kubernetes](./wordpress-deployment.md)
 - [一键部署应用](./one-click-deploy.md)
 - [创建任务计算圆周率](./job-quick-start.md)
