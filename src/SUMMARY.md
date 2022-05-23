@@ -12,5 +12,5 @@
 - [基于 Spring Boot 项目构建流水线](./devops-online.md)
 - [图形化构建流水线](./jenkinsfile-out-of-scm.md)
 - [Bookinfo 微服务的灰度发布示例](./bookinfo-canary.md)
-- [使用 Ingress-Nginx 进行灰度发布](./ingress-canary.md)
+- [使用 Ingress-Nginx 进行灰度发布](./ingress-canary/index.md)
 - [应用商店](./app-store.md)
