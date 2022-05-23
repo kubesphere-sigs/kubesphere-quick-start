@@ -1,12 +1,6 @@
 # 入门必读
 
----
 
-title: "入门必读"
-keywords: 'kubernetes, docker, helm, jenkins, istio, prometheus'
-
-description: ''
----
 
 本章节旨在通过多个快速入门的示例帮助您了解 KubeSphere 容器平台的基本使用流程，带您快速上手 KubeSphere。建议参考示例文档的步骤动手实践操作一遍。为了帮助用户更快地了解 KubeSphere 并进一步理解底层 Kubernetes 的基础概念和知识，我们还精心准备了 [Kubernetes 入门视频教程](https://kubesphere.com.cn/videos/)。
 
@@ -72,7 +66,7 @@ Source to Image(S2I) 是一个创建 Docker 镜像的工具。它可以通过将
 
 ## Bookinfo 微服务的灰度发布示例
 
-[KubeSphere](https://link.zhihu.com/?target=https%3A//github.com/kubesphere/kubesphere) 基于 Istio 提供了蓝绿部署、金丝雀发布、流量镜像等三种灰度策略，无需修改应用的业务代码，即可实现灰度、流量治理、Tracing、流量监控、调用链等服务治理功能。本示例演示基于 KubeSphere 快速创建一个微服务应用并对其中的服务组件进行灰度发布与熔断。参考[Bookinfo 微服务的灰度发布示例](../bookinfo-canary.md)
+KubeSphere 基于 Istio 提供了蓝绿部署、金丝雀发布、流量镜像等三种灰度策略，无需修改应用的业务代码，即可实现灰度、流量治理、Tracing、流量监控、调用链等服务治理功能。本示例演示基于 KubeSphere 快速创建一个微服务应用并对其中的服务组件进行灰度发布与熔断。参考[Bookinfo 微服务的灰度发布示例](../bookinfo-canary.md)
 
 
 
