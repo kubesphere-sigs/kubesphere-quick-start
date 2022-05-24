@@ -8,7 +8,7 @@
 - [创建任务计算圆周率](./job-quick-start.md)
 - [设置弹性伸缩](./hpa.md)
 - [Source to Image：无需 Dockerfile 发布应用](./source-to-image.md)
-- [Binary to Image](./b2i-war.md)
+- [Binary to Image](./b2i-war/b2i-war.md)
 - [基于 Spring Boot 项目构建流水线](./devops-online.md)
 - [图形化构建流水线](./jenkinsfile-out-of-scm.md)
 - [Bookinfo 微服务的灰度发布示例](./bookinfo-canary.md)
