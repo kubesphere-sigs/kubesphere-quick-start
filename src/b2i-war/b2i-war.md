@@ -1,6 +1,6 @@
 # Binary to Image
 
-## 什么是  Binary-to-image
+## 什么是 Binary-to-image
 
 **Binary-to-image (B2I)** 可以理解为一个集成了多个工具的工作流，旨在帮助开发者和运维人员在项目打包成 War、Jar、Binary 这一类制品后，快速将制品打包成 Docker 镜像，发布到 DockerHub 或 Harbor 等镜像仓库中。同时 B2I 也支持以**创建服务**的形式，一键将制品生成镜像推送到镜像仓库后，创建其部署 (Deployment) 和服务 (Service) 并自动发布到 Kubernetes 集群中。
 
