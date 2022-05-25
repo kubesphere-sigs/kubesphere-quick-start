@@ -40,6 +40,8 @@ this is version 2.
 进入到 `test` 项目空间，打开`网关设置`：
 ![网关设置](1.png)
 > 网关这里采用 `NodePort` 方式暴露测试，注意 `HTTP` 端口号：`31897` ，后面的服务请求都是通过这个端口。
+> 
+> 注意： `NodePort` 端口号 `31897` 可能会随着环境的不同而改变。
 
 ## 第二步：创建 Production 版本的应用
 - 选择`服务`，点击`创建`
@@ -55,16 +57,26 @@ this is version 2.
 - `容器组设置`其余配置选择默认，点击`下一步`
 - `存储卷设置`选择默认，点击`下一步`
 - `高级设置`选择默认，点击`创建`
-- 创建完成，可以看到 `service` 的 `ClusterIP` 是 `10.233.53.192`
+- 创建完成，可以看到 `service` 的 `ClusterIP` 是 `10.233.53.192` 
+> 备注：`ClusterIP` 以您的实际环境为准
+
 ![创建完成](7.png)
 - 点击刚刚创建的服务名 `app-production` 查看服务详情，确认服务运行正常
 ![运行状态](8.png)
-- 可以在集群内部节点上通过命令测试
+- 选择服务 `app-production` ，`编辑外部访问`
+
+![外部访问](30.png)
+- 选择 `NodePort` 访问方式，点击`确认`
+![外部访问](31.png)
+- 查看给服务 `app-production` 分配的 `NodePort` 端口是 `30391`
+![外部访问](32.png)
+> 注意：`NodePort` 端口号 `30391` 可能会随着环境的不同而改变。
+- 通过集群节点的 `IP` 和 `NodePort` 端口访问服务测试
 ```bash
-[root@master1 ~]# curl 10.233.53.192:8080/version
+# 172.16.0.23 是集群的一个节点的 IP 地址，这里需要换成你的集群节点 IP
+[root@master1 ~]# curl 172.16.0.23:30391/version
 this is version 1.
 ```
-> 也可以将 `service` 改为 `type: NodePort` 方式暴露到集群外访问测试，在 `KubeSphere` 上选择服务的`编辑外部访问`即可，此处不在演示。
 
 ## 第三步：创建 Canary 版本
 - 参考[第二步：创建 Production 版本的应用](/ingress-canary/index.html#第二步创建-production-版本的应用)步骤创建 `Canary` 版本应用，注意镜像选择 `hub.deri.org.cn/library/test-ingress-nginx-canary:v2`
