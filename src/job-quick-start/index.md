@@ -14,6 +14,7 @@
  ## 创建任务
 
  1. 以项目普通用户 `project-regular`登录 KubeSphere 控制台，在所属项目的左侧菜单栏，选择 **应用负载 → 任务**，点击 **创建任务**。
+
     ![942f4a48d5b64de0999d05fc6ab19259.png](942f4a48d5b64de0999d05fc6ab19259.png)
 
  2. 参考如下提示填写任务的基本信息，完成后点击 **下一步**。
@@ -21,7 +22,8 @@
     - 名称：为创建的任务起一个简洁明了的名称，便于用户浏览和搜索，如 job-demo。
     - 别名：别名可以由任意字符组成，帮助您更好的区分资源，并支持中文名称。
     - 描述：简单介绍应用仓库的任务，让用户进一步了解该任务。
-      ![2f4a484439cd4c49ada8c6998473306f.png](2f4a484439cd4c49ada8c6998473306f.png)
+
+   ![2f4a484439cd4c49ada8c6998473306f.png](2f4a484439cd4c49ada8c6998473306f.png)
 
  3. 任务设置页中，通过设置 Job Spec 的四个配置参数来设置 Job 的任务类型，完成后点击 **下一步**。
 
@@ -32,54 +34,56 @@
  6. Parallelism：输入 2，标志并行运行的 Pod 的个数；如此处设置为 2 则表示并行 2 个 Pod。
 
  7. Active Deadline Seconds：输入 300，指定 Job 可运行的时间期限，超过时间还未结束，系统将会尝试进行终止，且ActiveDeadlineSeconds 优先级高于 Back Off Limit；如此处设置 300 则表示如果超过 300s 后 Job 中的所有 Pod 运行将被终止。
-    ![b0746a41c5e343a299b751e5f3f65730.png](b0746a41c5e343a299b751e5f3f65730.png)
 
-    > **说明： [重启策略 (RestartPolicy)](https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#restart-policy) 指通过同一节点上的 kubelet 重新启动容器，支持 Never 或 OnFailure。RestartPolicy 表示当任务未完成的情况下：**
-    >
-    >  - Never：任务会在容器组出现故障时创建新的容器组，且故障容器组不会消失。
-    >  - OnFailure：任务会在容器组出现故障时在其内部重启容器，而不是创建新的容器组。
+   ![b0746a41c5e343a299b751e5f3f65730.png](b0746a41c5e343a299b751e5f3f65730.png)
 
-    ![cf0c676715ff4b5da31bd0d18e6ed7e9.png](cf0c676715ff4b5da31bd0d18e6ed7e9.png)
+   > **说明： [重启策略 (RestartPolicy)](https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#restart-policy) 指通过同一节点上的 kubelet 重新启动容器，支持 Never 或 OnFailure。RestartPolicy 表示当任务未完成的情况下：**
+   >
+   >  - Never：任务会在容器组出现故障时创建新的容器组，且故障容器组不会消失。
+   >  - OnFailure：任务会在容器组出现故障时在其内部重启容器，而不是创建新的容器组。
+
+   ![cf0c676715ff4b5da31bd0d18e6ed7e9.png](cf0c676715ff4b5da31bd0d18e6ed7e9.png)
 
  8. 下一步点击 添加容器镜像，镜像名输入 `perl`，然后按回车键或点击 DockerHub。
-    ![0d348e30f2c54025b9ce35b99fecbdce.png](0d348e30f2c54025b9ce35b99fecbdce.png)
+
+   ![0d348e30f2c54025b9ce35b99fecbdce.png](0d348e30f2c54025b9ce35b99fecbdce.png)
 
  9. 勾选 启动命令，依次添加如下四段命令（每一段命令以 "," 隔开），即让每一个 Job 执行输出圆周率小数点后 2000 位。如下设置完成后点击 √，然后选择 下一步。
 
-    ```shell
-    perl,-Mbignum=bpi,-wle,print bpi(2000)
-    ```
+   ```shell
+   perl,-Mbignum=bpi,-wle,print bpi(2000)
+   ```
 
-    ![f017010baf3c4810afd60c5cc3853fdb.png](f017010baf3c4810afd60c5cc3853fdb.png)
+   ![f017010baf3c4810afd60c5cc3853fdb.png](f017010baf3c4810afd60c5cc3853fdb.png)
 
  10. 本示例暂不需要设置存储卷，可以跳过此步骤，点击 **下一步**，无需挂载存储，点击 **下一步** → **创建**，任务创建成功，可在任务列表页查看。
-       ![9a6e21612a464b92bc2de55be9946c68.png](9a6e21612a464b92bc2de55be9946c68.png)
-     
-       ![5761676a12734b4b9484c367048dad43.png](5761676a12734b4b9484c367048dad43.png)
-     
-       ![4fa45fec31314e019f9ccaed324a3e74.png](4fa45fec31314e019f9ccaed324a3e74.png)
-     
-     ![66ebd3ef028d45cd889297ea317b29f5.png](66ebd3ef028d45cd889297ea317b29f5.png)
+
+   ![9a6e21612a464b92bc2de55be9946c68.png](9a6e21612a464b92bc2de55be9946c68.png)
+
+   ![5761676a12734b4b9484c367048dad43.png](5761676a12734b4b9484c367048dad43.png)
+
+   ![4fa45fec31314e019f9ccaed324a3e74.png](4fa45fec31314e019f9ccaed324a3e74.png)
+
+![66ebd3ef028d45cd889297ea317b29f5.png](66ebd3ef028d45cd889297ea317b29f5.png)
 
  ## 验证任务结果
 
  1. 点击该任务 `job-demo`查看执行记录，可以看到任务执行的结果状态是 "已完成(4/4)"，并且一共运行了 4 个 Pod，这是因为在第二步 Completions 设置为 4。
 
-    > 提示：若提示 “失败 (3/4)” 这是由于镜像创建较慢导致在指定的 "Active Deadline Seconds" 时间内没有完全创建，可点击重新执行继续该计算任务。
+   > 提示：若提示 “失败 (3/4)” 这是由于镜像创建较慢导致在指定的 "Active Deadline Seconds" 时间内没有完全创建，可点击重新执行继续该计算任务。
 
-    ![ec3c0dfa6b1a4f60b0c9bff0cc562776.png](ec3c0dfa6b1a4f60b0c9bff0cc562776.png)
-
+   ![ec3c0dfa6b1a4f60b0c9bff0cc562776.png](ec3c0dfa6b1a4f60b0c9bff0cc562776.png)
 
  2. 在任务详情页的 **资源状态**，可以查看任务执行过程中创建的容器组。由于 Parallelism 设置为 2，因此任务将预先并行地创建 2 个容器组，然后再继续并行创建 2 个容器组，任务结束时将创建 4 个容器组。
-    ![daadc93effa54bd885d9e7aaeeda2257.png](daadc93effa54bd885d9e7aaeeda2257.png)
 
-    > 提示：在事件（Events）中也可以通过创建时间来验证以上 4 个容器组是在两个不同的时间点，两两并行开始执行创建任务的。
+   ![daadc93effa54bd885d9e7aaeeda2257.png](daadc93effa54bd885d9e7aaeeda2257.png)
 
-    ![01f8136ac62744c4ad0c74693b9ed7ac.png](01f8136ac62744c4ad0c74693b9ed7ac.png)
+   > 提示：在事件（Events）中也可以通过创建时间来验证以上 4 个容器组是在两个不同的时间点，两两并行开始执行创建任务的。
 
+   ![01f8136ac62744c4ad0c74693b9ed7ac.png](01f8136ac62744c4ad0c74693b9ed7ac.png)
 
  2. 在 **资源状态** 页，展开其中任意一个容器组（Pod），点击 容器日志，即可进入容器查看 pi 容器中命令计算圆周率到小数点后 2000 位的输出结果。
 
-    ![2df5d861676a487d80ecf2a824ca30fa.png](2df5d861676a487d80ecf2a824ca30fa.png)
+   ![2df5d861676a487d80ecf2a824ca30fa.png](2df5d861676a487d80ecf2a824ca30fa.png)
 
  至此，您已经熟悉了任务 (Job) 的基本功能使用，关于任务的各项参数释义详见 [任务](https://v2-1.docs.kubesphere.io/docs/zh-CN/workload/jobs/)。
