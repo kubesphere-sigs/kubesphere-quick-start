@@ -149,7 +149,7 @@ $ watch -n 0.5 "curl http://productpage.demo.172.17.103.164.nip.io:32458/product
 
 2. 再次打开 bookinfo 页面，多次刷新后 reviews 模块也仅仅只显示 v2 版本。
 
-![](https://pek3b.qingstor.com/kubesphere-docs/png/20190417134504.png)
+![](./bookinfo-canary-demo/008.png)
 
 ### 下线旧版本
 
