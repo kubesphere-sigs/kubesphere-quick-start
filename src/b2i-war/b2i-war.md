@@ -163,7 +163,7 @@
 
 4. 在**构建设置**页面，请提供以下相应信息，然后点击**创建**。
 
-   **上传制品**：下载 [b2i-binary](https://github.com/kubesphere/tutorial/raw/master/tutorial 4 - s2i-b2i/b2i-binary) 并上传至 KubeSphere。
+   **上传制品**：下载 [b2i-binary](https://github.com/kubesphere/tutorial/raw/master/tutorial 4 - s2i-b2i/b2i-binary)并上传至 KubeSphere。
 
    **构建环境**：选择 **kubesphere/s2i-binary:v3.2.0**。
 
