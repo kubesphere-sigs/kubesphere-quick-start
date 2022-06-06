@@ -54,7 +54,7 @@ Binary to Image 旨在帮助开发者和运维在项目打包成 WAR、JAR、Bin
 
 Source to Image(S2I) 是一个创建 Docker 镜像的工具。它可以通过将源代码放入一个单独定义的负责编译源代码的 Builder image 中，来将编译后的代码打包成 Docker 镜像。参考[Source to Image](../source-to-image)
 
-- [基于Spring Boot项目构建流水线](../devops-online)
+- [基于 Spring Boot 项目构建流水线](../devops-online)
 
 本示例演示如何通过 GitHub 仓库中的 Jenkinsfile 来创建 CI/CD 流水线，包括拉取代码、单元测试、代码质量检测、构建镜像、推送和发布版本，最终示例 Web 部署到 KubeSphere 集群中的开发环境和生产环境，并且能够通过公网访问。参考[基于Spring Boot项目构建流水线](../devops-online)
 
