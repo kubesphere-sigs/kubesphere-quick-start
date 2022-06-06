@@ -52,7 +52,7 @@ Binary to Image 旨在帮助开发者和运维在项目打包成 WAR、JAR、Bin
 
 - [Source to Image](../source-to-image)
 
-Source to Image(S2I) 是一个创建 Docker 镜像的工具。它可以通过将源代码放入一个单独定义的负责编译源代码的 Builder image中，来将编译后的代码打包成 Docker 镜像。参考[Source to Image](../source-to-image)
+Source to Image(S2I) 是一个创建 Docker 镜像的工具。它可以通过将源代码放入一个单独定义的负责编译源代码的 Builder image 中，来将编译后的代码打包成 Docker 镜像。参考[Source to Image](../source-to-image)
 
 - [基于Spring Boot项目构建流水线](../devops-online)
 
