@@ -67,11 +67,11 @@ reviews 微服务有 3 个版本：
 
 1. 完成上述步骤后，在应用路由下选择 「点击访问」，可以看到 bookinfo 的 details 页面。
 
-![](https://pek3b.qingstor.com/kubesphere-docs/png/20190417102555.png)
+![](./bookinfo-canary-demo/011.png)
 
-5. 点击 **Normal user** 访问 productpage。注意此时 Book Reviews 部分只显示了 Reviewer1 和 Reviewer2。
+1. 点击 **Normal user** 访问 productpage。注意此时 Book Reviews 部分只显示了 Reviewer1 和 Reviewer2。
 
-![](https://pek3b.qingstor.com/kubesphere-docs/png/20190414165548.png)
+![](./bookinfo-canary-demo/012)
 
 ### 添加灰度发布
 
