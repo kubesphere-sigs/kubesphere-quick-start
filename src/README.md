@@ -48,15 +48,15 @@ KubeSphere 在项目中为用户项目内置了一个全局的负载均衡器，
 
 - [Binary to Image](../b2i-war)
 
-Binary to Image 旨在帮助开发者和运维在项目打包成 WAR、JAR、Binary 这一类的制品后，快速将制品或二进制的 Package 打包成 Docker 镜像，并发布到 DockerHub 或 Harbor 等镜像仓库中。并且支持以创建服务的形式，一键将制品生成镜像推送到仓库，并创建其部署 (Deployment) 和服务 (Service) 最终自动发布到 Kubernetes 中。参考[Binary to Image](../b2i-war)
+Binary to Image 旨在帮助开发者和运维在项目打包成 WAR、JAR、Binary 这一类的制品后，快速将制品或二进制的 Package 打包成 Docker 镜像，并发布到 DockerHub 或 Harbor 等镜像仓库中。并且支持以创建服务的形式，一键将制品生成镜像推送到仓库，并创建其部署 (Deployment) 和服务 (Service) 最终自动发布到 Kubernetes 中。参考 [Binary to Image](../b2i-war)
 
 - [Source to Image](../source-to-image)
 
-Source to Image(S2I) 是一个创建 Docker 镜像的工具。它可以通过将源代码放入一个单独定义的负责编译源代码的 Builder image 中，来将编译后的代码打包成 Docker 镜像。参考[Source to Image](../source-to-image)
+Source to Image(S2I) 是一个创建 Docker 镜像的工具。它可以通过将源代码放入一个单独定义的负责编译源代码的 Builder image 中，来将编译后的代码打包成 Docker 镜像。参考 [Source to Image](../source-to-image)
 
 - [基于 Spring Boot 项目构建流水线](../devops-online)
 
-本示例演示如何通过 GitHub 仓库中的 Jenkinsfile 来创建 CI/CD 流水线，包括拉取代码、单元测试、代码质量检测、构建镜像、推送和发布版本，最终示例 Web 部署到 KubeSphere 集群中的开发环境和生产环境，并且能够通过公网访问。参考[基于Spring Boot项目构建流水线](../devops-online)
+本示例演示如何通过 GitHub 仓库中的 Jenkinsfile 来创建 CI/CD 流水线，包括拉取代码、单元测试、代码质量检测、构建镜像、推送和发布版本，最终示例 Web 部署到 KubeSphere 集群中的开发环境和生产环境，并且能够通过公网访问。参考 [基于 Spring Boot 项目构建流水线](../devops-online)
 
 - [图形化构建流水线（Jenkinsfile out of SCM）](../jenkinsfile-out-of-scm)
 
@@ -66,7 +66,7 @@ Source to Image(S2I) 是一个创建 Docker 镜像的工具。它可以通过将
 
 ## Bookinfo 微服务的灰度发布示例
 
-KubeSphere 基于 Istio 提供了蓝绿部署、金丝雀发布、流量镜像等三种灰度策略，无需修改应用的业务代码，即可实现灰度、流量治理、Tracing、流量监控、调用链等服务治理功能。本示例演示基于 KubeSphere 快速创建一个微服务应用并对其中的服务组件进行灰度发布与熔断。参考[Bookinfo 微服务的灰度发布示例](../bookinfo-canary.md)
+KubeSphere 基于 Istio 提供了蓝绿部署、金丝雀发布、流量镜像等三种灰度策略，无需修改应用的业务代码，即可实现灰度、流量治理、Tracing、流量监控、调用链等服务治理功能。本示例演示基于 KubeSphere 快速创建一个微服务应用并对其中的服务组件进行灰度发布与熔断。参考 [Bookinfo 微服务的灰度发布示例](../bookinfo-canary.md)
 
 
 
